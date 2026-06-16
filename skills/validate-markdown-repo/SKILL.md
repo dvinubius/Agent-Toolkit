@@ -1,11 +1,11 @@
 ---
 name: validate-markdown-repo
-description: Validate Markdown repositories with a bundled, parameterized Python script. Use when checking local Markdown links, Codex/agent skill SKILL.md frontmatter, mirrored template files, scaffold docs, generated docs, or any repository documentation consistency that would otherwise require writing an ad hoc Markdown validation script.
+description: Validate Markdown-heavy work in any repository with a bundled, parameterized Python script. Use when a task involves checking or maintaining many Markdown files, local Markdown links, skill-style SKILL.md frontmatter, mirrored template files, scaffold docs, generated docs, or documentation consistency that would otherwise require writing an ad hoc Markdown validation script.
 ---
 
 # Validate Markdown Repo
 
-Use the bundled script instead of inventing a one-off validator when a task needs deterministic checks for:
+Use the bundled script instead of inventing a one-off validator when a task involves many Markdown files and needs deterministic checks for:
 
 - local Markdown link targets, including image links and reference definitions
 - `SKILL.md` YAML frontmatter fields such as `name` and `description`
