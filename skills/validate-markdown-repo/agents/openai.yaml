@@ -1,0 +1,5 @@
+interface:
+  display_name: "Validate Markdown Repo"
+  short_description: "Check Markdown links and template drift"
+  default_prompt: "Use $validate-markdown-repo to validate local Markdown links, skill frontmatter, and template pairs."
+
