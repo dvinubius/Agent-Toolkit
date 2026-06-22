@@ -1,0 +1,7 @@
+interface:
+  display_name: "To My Specs"
+  short_description: "Turn context into product intent specs"
+  default_prompt: "Use $to-my-specs to turn the current product context into concise specs."
+
+policy:
+  allow_implicit_invocation: false
