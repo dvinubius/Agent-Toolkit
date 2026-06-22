@@ -1,6 +1,6 @@
 ---
 name: to-my-specs
-description: Turn conversational agent context into product/business intent specs for an app or integratable system. Use only when explicitly invoked by an engineer to create or update project specs, especially a specs/ directory, from stated product intent rather than repository implementation details. Do not use implicitly during normal task execution.
+description: Turn conversational agent context into product/business intent specs for an app or integratable system. Use only when explicitly invoked by an engineer to create or update project specs, especially a .devnotes/specs directory, from stated product intent rather than repository implementation details. Do not use implicitly during normal task execution.
 ---
 
 # To My Specs
@@ -15,7 +15,7 @@ Specs are not implementation plans. They describe what the product or system is 
 
 Use this skill only when the engineer explicitly invokes it, for example with `$to-my-specs` or a direct request to use the `to-my-specs` skill.
 
-Do not read project specs by default during unrelated implementation tasks. Treat a project `specs/` directory as optional product/business intent context that may be absent, partial, or stale.
+Do not read project specs by default during unrelated implementation tasks. Treat a project `.devnotes/specs/` directory as optional product/business intent context that may be absent, partial, or stale.
 
 ## Source Rules
 
@@ -83,16 +83,16 @@ Keep coupled requirements together. When coupled requirements must live in separ
 2. Gather only allowed context. If necessary context is missing, ask concise clarification questions or mark open questions.
 3. Draft or update specs in product/business terms.
 4. Separate confirmed intent from open questions and optional future considerations.
-5. Create or update `specs/README.md` as the specification map.
-6. Put actual specifications in one or more dedicated Markdown files under `specs/`.
+5. Create or update `.devnotes/specs/README.md` as the specification map.
+6. Put actual specifications in one or more dedicated Markdown files under `.devnotes/specs/`.
 7. When editing files, preserve existing product intent unless the user explicitly supersedes it.
 8. Flag stale or implementation-derived spec content instead of silently accepting it.
 
 ## Suggested Spec Shape
 
-Use the project's existing spec structure when present, while maintaining `specs/README.md` as the specification map. Put actual specifications in one or more dedicated Markdown files under `specs/`.
+Use the project's existing spec structure when present, while maintaining `.devnotes/specs/README.md` as the specification map. Put actual specifications in one or more dedicated Markdown files under `.devnotes/specs/`.
 
-Use this template for `specs/README.md`:
+Use this template for `.devnotes/specs/README.md`:
 
 ```markdown
 # Specification Map
@@ -105,7 +105,7 @@ Use this template for `specs/README.md`:
 
 | Area | File | Scope | Important relationships |
 |---|---|---|---|
-| `<area>` | `specs/<file>.md` | `<behavior covered>` | `<coupled areas or none>` |
+| `<area>` | `.devnotes/specs/<file>.md` | `<behavior covered>` | `<coupled areas or none>` |
 
 ## Cross-Cutting Requirements
 
