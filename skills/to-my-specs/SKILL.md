@@ -45,6 +45,8 @@ Include a statement only when both checks pass:
 
 Reject or rewrite statements that choose libraries, data models, APIs, database structure, component hierarchy, hosting, internal algorithms, or other construction choices.
 
+Do not put implementation plans, architecture candidates, technologies, internal data models, module boundaries, algorithms, migrations, rollout mechanics, or engineering sequencing in specs merely because they arose while reasoning about product intent.
+
 ## What To Capture
 
 Prefer product/business language for:
@@ -63,10 +65,17 @@ Prefer product/business language for:
 Do not write:
 
 - Implementation plans, tasks, tickets, milestones, or engineering approaches.
+- Architecture candidates, technologies, internal data models, module boundaries, algorithms, migrations, rollout mechanics, or engineering sequencing.
 - Technical architecture unless the user states a product-level integration contract that must survive implementation replacement.
 - Details copied or inferred from code.
 - Overconfident requirements when the conversation only implies a possibility.
 - "Current implementation does X" unless the user explicitly wants an implementation note outside the spec.
+
+## Writing Style
+
+Use natural-language headings rather than global requirement IDs. Prefer headings that describe the product area, behavior, actor, workflow, rule, or question.
+
+Keep coupled requirements together. When coupled requirements must live in separate files or sections, make the relationship explicit with a short note in both relevant places or in the specification map.
 
 ## Workflow
 
@@ -74,12 +83,44 @@ Do not write:
 2. Gather only allowed context. If necessary context is missing, ask concise clarification questions or mark open questions.
 3. Draft or update specs in product/business terms.
 4. Separate confirmed intent from open questions and optional future considerations.
-5. When editing files, preserve existing product intent unless the user explicitly supersedes it.
-6. Flag stale or implementation-derived spec content instead of silently accepting it.
+5. Create or update `specs/README.md` as the specification map.
+6. Put actual specifications in one or more dedicated Markdown files under `specs/`.
+7. When editing files, preserve existing product intent unless the user explicitly supersedes it.
+8. Flag stale or implementation-derived spec content instead of silently accepting it.
 
 ## Suggested Spec Shape
 
-Use the project's existing spec structure when present. If no structure exists, prefer concise Markdown under `specs/`.
+Use the project's existing spec structure when present, while maintaining `specs/README.md` as the specification map. Put actual specifications in one or more dedicated Markdown files under `specs/`.
+
+Use this template for `specs/README.md`:
+
+```markdown
+# Specification Map
+
+## Product Summary
+
+`<What the product is, who it serves, and the main outcome it provides.>`
+
+## Current Specification Files
+
+| Area | File | Scope | Important relationships |
+|---|---|---|---|
+| `<area>` | `specs/<file>.md` | `<behavior covered>` | `<coupled areas or none>` |
+
+## Cross-Cutting Requirements
+
+- `<requirement affecting several spec areas, or none>`
+
+## Domain Language
+
+Canonical project-specific terminology lives in `docs/domain-language.md`.
+
+## Open Product Questions
+
+- `<question, or none>`
+```
+
+Use dedicated spec files for product areas, workflows, actors, business rules, integration expectations, or other coherent behavior groups.
 
 Useful sections:
 
