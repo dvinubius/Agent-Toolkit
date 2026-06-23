@@ -1,6 +1,6 @@
 # Web App Arsenal Reference
 
-Last researched: 2026-06-22. Use current official docs before production decisions, pricing estimates, or installs.
+Last researched: 2026-06-23. Use current official docs before production decisions, pricing estimates, or installs.
 
 ## Biome
 
@@ -138,6 +138,37 @@ Alternatives to consider:
 - Supabase or Firebase when managed auth/storage/realtime and hosted operations matter.
 - Plain Postgres plus a backend framework when relational scale, reporting, and operational maturity matter.
 - Django/Rails/Laravel when a conventional full-stack backend is a better long-term fit.
+
+## Convex
+
+Official: https://docs.convex.dev/home
+
+What it is: an open-source reactive database and backend platform where queries, mutations, actions, schemas, and server functions are written in JavaScript/TypeScript. Convex stores JSON-like documents, supports optional schemas for end-to-end TypeScript safety, and pushes realtime updates to subscribed clients.
+
+Consider when:
+- The app is TypeScript-heavy and wants database, backend functions, realtime sync, scheduling, file storage, search, and client libraries as one integrated platform.
+- Live-updating UI, collaborative state, dashboards, chat, presence, or agentic workflows are central product behavior.
+- The team wants to avoid manual cache invalidation, websocket plumbing, and separate API/backend boilerplate.
+
+Pros:
+- Excellent fit for React/Next.js-style apps that need reactive data and strong TypeScript DX.
+- Queries are cached/subscribable, mutations are transactional, and actions can call external services.
+- Reduces full-stack glue code by combining database access, server functions, realtime, scheduling, auth integrations, file storage, and search.
+- Optional schemas let teams prototype quickly and add stronger validation/type safety as the model settles.
+- Self-hosting exists, and Convex publishes the backend, clients, dashboard, and CLI as open source/fair source.
+
+Cons:
+- Not SQL/Postgres; analytics, reporting, joins, ad hoc querying, and existing relational workflows may fit Postgres/Supabase/Neon better.
+- Adopting Convex means buying into its server-function and data-access model rather than a conventional REST/SQL/backend architecture.
+- Less mainstream than Postgres-backed stacks, Firebase, or Supabase; hiring, library examples, and operational playbooks may be thinner.
+- Hosted Convex is easiest; self-hosting shifts operational responsibility back to the team and is not the default recommendation from Convex docs.
+- Check pricing, data export/import needs, compliance posture, and lock-in tolerance before choosing it for production.
+
+Alternatives to consider:
+- Supabase or Firebase when a more mainstream backend-as-a-service is better for the team.
+- Neon/Supabase/Postgres plus Drizzle/Prisma when SQL, reporting, portability, or existing relational practices matter.
+- PocketBase for a small self-hosted single-binary backend.
+- Custom backend plus Postgres/Redis/websockets when the domain requires explicit control over APIs and infrastructure.
 
 ## Render
 
@@ -287,6 +318,7 @@ Alternatives to consider:
 - Depot home/docs entry points: https://depot.dev/
 - PocketBase FAQ: https://pocketbase.io/faq/
 - Render docs: https://render.com/docs
+- Convex docs, database, functions, and self-hosting: https://docs.convex.dev/home, https://docs.convex.dev/database, https://docs.convex.dev/functions, and https://docs.convex.dev/self-hosting
 - Neon docs: https://neon.com/docs/introduction
 - Supabase docs and production checklist: https://supabase.com/docs and https://supabase.com/docs/guides/deployment/going-into-prod
 - Drizzle overview: https://orm.drizzle.team/docs/overview

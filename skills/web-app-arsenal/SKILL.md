@@ -1,6 +1,6 @@
 ---
 name: web-app-arsenal
-description: Pragmatic web app stack selection guidance for development, CI, databases, backend platforms, search APIs, code quality, and deployment. Use when choosing, reviewing, or comparing tools/products for a web app, especially Biome, Coolify, SerpApi, Depot, PocketBase, Render, Neon, Supabase, Drizzle, or Fallow, or when an agent needs pros/cons and fit guidance before adding infrastructure or dependencies.
+description: Pragmatic web app stack selection guidance for development, CI, databases, backend platforms, search APIs, code quality, and deployment. Use when choosing, reviewing, or comparing tools/products for a web app, especially Biome, Coolify, SerpApi, Depot, PocketBase, Convex, Render, Neon, Supabase, Drizzle, or Fallow, or when an agent needs pros/cons and fit guidance before adding infrastructure or dependencies.
 ---
 
 # Web App Arsenal
@@ -29,6 +29,7 @@ Use this skill to evaluate whether a tool from the user's web-app arsenal is a g
 - **SerpApi**: search-engine results API candidate.
 - **Depot**: CI, Docker build, and GitHub Actions acceleration candidate.
 - **PocketBase**: compact self-hosted backend candidate for small and midsize apps.
+- **Convex**: reactive TypeScript database/backend platform candidate.
 - **Render**: managed PaaS candidate for apps, workers, static sites, and managed datastores.
 - **Neon**: serverless Postgres candidate with branching/autoscaling.
 - **Supabase**: Postgres-backed backend platform candidate with auth, storage, realtime, and edge functions.
