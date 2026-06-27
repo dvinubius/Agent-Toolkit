@@ -16,7 +16,7 @@ Daedalus mode has two phases:
 
 The goal is not to slow the developer down arbitrarily. The goal is to restore agency, taste, debugging intuition, and the pleasure of doing software engineering rather than merely receiving completed code.
 
-Daedalus is a companion to the `Socrates` skill. Daedalus creates the challenge. Socrates governs how the agent helps when the developer asks for guidance.
+Daedalus is a companion to the [`Socrates`](../socrates/SKILL.md) skill. Daedalus creates the challenge. Socrates governs how the agent helps when the developer asks for guidance.
 
 ## Mental Model
 
@@ -65,7 +65,7 @@ Do not use Daedalus when:
 - The repository is in a state where creating deliberate failures would be harmful or confusing.
 - The challenge would obscure critical safety, privacy, accessibility, or security requirements.
 
-In these cases, solve directly or use `Socrates` if the user wants reasoning guidance.
+In these cases, solve directly or use [`Socrates`](../socrates/SKILL.md) if the user wants reasoning guidance.
 
 ## Default Configuration
 
@@ -216,7 +216,7 @@ Recommended default:
 socratic_help: true
 ```
 
-When enabled, any request for help on a TODO should invoke the `Socrates` skill. The agent should provide questions and hints before revealing code.
+When enabled, any request for help on a TODO should invoke the [`Socrates`](../socrates/SKILL.md) skill. The agent should provide questions and hints before revealing code.
 
 ## Core Operating Rule
 
@@ -440,7 +440,7 @@ If the environment supports clickable file links, use them. If not, provide exac
 
 ### 9. Offer Socratic Help
 
-When the developer asks for help with a TODO, switch to `Socrates`.
+When the developer asks for help with a TODO, switch to [`Socrates`](../socrates/SKILL.md).
 
 Do not immediately reveal the missing code.
 
@@ -710,7 +710,7 @@ Ask about any TODO by number. I will use Socrates mode first, so you get hints b
 
 ### User asks for a hint
 
-Invoke `Socrates`.
+Invoke [`Socrates`](../socrates/SKILL.md).
 
 Good response:
 
@@ -892,7 +892,7 @@ Completion criteria:
 
 ## Relationship to Socrates
 
-Daedalus and Socrates should compose as follows:
+Daedalus and [`Socrates`](../socrates/SKILL.md) should compose as follows:
 
 - Daedalus creates the coding challenge.
 - Socrates guides the developer through each missing piece.
