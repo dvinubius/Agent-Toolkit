@@ -1,6 +1,6 @@
 # Agent Toolkit
 
-This repository collects personal Codex skills and supporting documentation for agent workflows. Each skill lives under `skills/<skill-name>/SKILL.md` and can be installed or referenced from an agent environment that supports skill discovery.
+This repository collects personal coding agent skills and supporting documentation for agent workflows. Each skill lives under `skills/<skill-name>/SKILL.md` and can be installed or referenced from an agent environment that supports skill discovery.
 
 The repository also includes `agent-loop-explainer.pdf`, a companion explanation artifact for agent loop concepts.
 
